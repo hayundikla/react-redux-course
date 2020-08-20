@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-
-class Vacation extends Component {
+export default class App extends Component {
     render() {
-        const { available } = this.props;
-        return ( <
-            div className = "card" >
-            <
-            h1 className = "vacation-text" > { available ? < span > Going on vacation < /span> :  <span>Too busy for Vacations</span > } <
-            /h1> <
-            /div>
+        return (
+          <div className="app">
+              <TopBar />
+              <h1 className="headline white-text">I am the main Application</h1>
+              <Card subject="friends" action="meet" mashehoo="blue" />
+              <Vacation available={true} />
+          </div>
         )
     }
 }
-
-export default Vacation
